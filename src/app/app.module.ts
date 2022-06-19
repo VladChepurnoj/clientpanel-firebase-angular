@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
 import { environment } from "../environments/environment";
 import { AngularFireModule } from "angularfire2";
@@ -19,7 +20,7 @@ import { RegisterComponent } from "./components/register/register.component";
 import { SettingsComponent } from "./components/settings/settings.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { AppRoutingModule } from ".//app-routing.module";
-import { ClientService } from './services/client.service';
+import { ClientService } from "./services/client.service";
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ClientService } from './services/client.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
