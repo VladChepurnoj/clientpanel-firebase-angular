@@ -19,7 +19,7 @@ export class AddClientComponent implements OnInit {
     balance: 0,
   };
 
-  disabledBalanceOnAdd: boolean = false;
+  disableBalanceOnAdd: boolean = false;
   @ViewChild("clientForm") form: any;
 
   constructor(
@@ -31,7 +31,7 @@ export class AddClientComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit({ value, valid }: { value: Client; valid: boolean }) {
-    if (this.disabledBalanceOnAdd) {
+    if (this.disableBalanceOnAdd) {
       value.balance = 0;
     }
 
